@@ -14,11 +14,9 @@ public class CydeoApp {
         ApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         CommentService cs1 = context.getBean(CommentService.class);
-        CommentService cs2 = context.getBean(CommentService.class);
+        // In EAGER, it creates all the objects when the application run, by default EAGER is in singleton.
+        // In LAZY, it creates only the objects and its own dependencies it requests
 
-        System.out.println(cs1);
-        System.out.println(cs2);
-        System.out.println(cs1 == cs2);
 
 
 
