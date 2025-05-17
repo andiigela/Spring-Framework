@@ -1,15 +1,13 @@
 package com.andi.spring04abstraction.proxy;
 import com.andi.spring04abstraction.model.Comment;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
-@Qualifier("EMAIL") // same as Bean(name="")
-public class EmailCommentNotificationProxy implements CommentNotificationProxy {
+@Qualifier("PUSH") // same as Bean(name="")
+public class CommentPushNotificationProxy implements CommentNotificationProxy {
     @Override
     public void sendComment(Comment comment) {
-        System.out.println("Sending notification for comment: " + comment.getText());
+        System.out.println("Sending push notification for comment: " + comment.getText());
     }
 }
