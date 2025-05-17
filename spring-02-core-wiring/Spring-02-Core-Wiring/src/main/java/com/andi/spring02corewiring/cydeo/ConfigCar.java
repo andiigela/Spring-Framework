@@ -1,6 +1,7 @@
 package com.andi.spring02corewiring.cydeo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 @Configuration
 public class ConfigCar {
     @Bean
