@@ -24,7 +24,6 @@ public class CommentService {
                 "Eager will show this message without requesting the bean from the container" +
                 "Lazy will not show this message without requesting the bean from the container");
     }
-
     public void publishComment(Comment comment) {
         commentRepository.storeComment(comment);
         commentNotificationProxy.sendComment(comment);
